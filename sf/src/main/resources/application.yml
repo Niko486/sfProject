@@ -1,0 +1,16 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://127.0.0.1:3306/sf?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true
+mybatis-plus:
+  #制定别名包
+  type-aliases-package: com.jt.pojo
+    #扫描指定路径下的映射文件
+  mapper-locations: classpath:/mapper/*.xml
+    #开启驼峰映射
+  configuration:
+    map-underscore-to-camel-case: true
